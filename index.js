@@ -13,6 +13,8 @@ mongoose.connect(DATABASE, { useNewUrlParser: true, useUnifiedTopology: true })
 // Import router
 const authRouter = require('./routes/auth/auth');
 
+// MIddleware
+app.use(express.json());
 
 // Router Middleware
 app.use('/api/user', authRouter);
