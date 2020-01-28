@@ -10,6 +10,9 @@ router.post("/register", async (req, res) => {
 
     // Validate the data before user create 
     const {error} = registerValidation(req.body);
+    console.log('====================================');
+    console.log(error);
+    console.log('====================================');
     if (error) return res.status(400).send(error.details[0].message);
 
     let email = req.body.email.toLowerCase();
@@ -24,7 +27,19 @@ router.post("/register", async (req, res) => {
     const user = new User({
         name: req.body.name,
         email: email,
-        password: hashPassword
+        password: hashPassword,
+        nameUpdatedAt: req.body.nameUpdatedAt,
+        phoneNumber: req.body.phoneNumber,
+        location: req.body.location,
+        joinDate: req.body.joinDate,
+        aboutMe: req.body.aboutMe,
+        active: req.body.active,
+        socialMedia: req.body.socialMedia,
+        profileImage: req.body.profileImage,
+        coverImages: req.body.coverImages,
+        gender: req.body.gender,
+        birthday: req.body.birthday,
+        nationality: req.body.nationality
     });
 
     try {
