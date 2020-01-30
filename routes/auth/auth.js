@@ -10,9 +10,6 @@ router.post("/register", async (req, res) => {
 
     // Validate the data before user create 
     const {error} = registerValidation(req.body);
-    console.log('====================================');
-    console.log(error);
-    console.log('====================================');
     if (error) return res.status(400).send(error.details[0].message);
 
     let email = req.body.email.toLowerCase();
@@ -44,7 +41,6 @@ router.post("/register", async (req, res) => {
 
     try {
         const saveUser = await user.save();
-
         res.send(saveUser);
     } catch (err) {
         res.status(400).send(err)
@@ -53,7 +49,6 @@ router.post("/register", async (req, res) => {
 
 
 // Login
-
 router.post("/login", async(req, res) => {
     // Validate the data before user create 
     const {error} = loginValidation(req.body);

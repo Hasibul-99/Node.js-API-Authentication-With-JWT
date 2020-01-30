@@ -112,6 +112,10 @@ const userSchema = new mongoose.Schema([CreatedAtSchemas, {
     passwordToken: {
         type: String,
         optional: true
+    },
+    lastActive: {
+        type: Date,
+        optional: true
     }
 }]);
 

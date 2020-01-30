@@ -18,7 +18,8 @@ const registerValidation = (data) => {
         gender: Joi.string().allow('male', 'femail'),
         birthday: Joi.date(),
         nationality: Joi.string().min(2),
-        passwordToken: Joi.string()
+        passwordToken: Joi.string(),
+        lastActive: Joi.date().default(new Date())
     });
 
     // Let's validate the data before we a user

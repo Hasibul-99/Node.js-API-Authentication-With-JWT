@@ -1,0 +1,16 @@
+{
+    "name": "Tushar",
+    "nameUpdatedAt": "2020-01-24T23:46:44.517+00:00",
+    "phoneNumber": "0165789457",
+    "email": "hasibu_uap@outlook.com",
+    "password": "123456",
+    "location": {
+    "name": "Dhaka",
+    "placeId": "123",
+    "city": "Dhaka",
+    "country": "Bangladesh"
+    },
+    "profileImage": "https://mongoosejs.com/docs/schematypes.html",
+    "coverImages": ["https://mongoosejs.com/docs/schematypes.html", "https://mongoosejs.com/docs/schematypes.html"],
+    "gender": "male2"
+    }

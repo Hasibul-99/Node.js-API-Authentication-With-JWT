@@ -11,7 +11,7 @@ const CreatedAtSchemas = new mongoose.Schema({
 const CreatedBySchemas = new mongoose.Schema({
     createdBy: {
         type: String,
-        optional: true
+        required: true
     }
 });
 
