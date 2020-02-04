@@ -14,6 +14,8 @@ mongoose.connect(DATABASE, { useNewUrlParser: true, useUnifiedTopology: true })
 const authRouter = require('./routes/auth/auth');
 const userRoute = require('./routes/user/user');
 const tourRoute = require('./routes/tour/tour');
+const bookingRoute = require('./routes/booking/booking');
+const reviewRoute = require('./routes/review/review');
 // MIddleware
 app.use(express.json());
 
@@ -21,5 +23,7 @@ app.use(express.json());
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRoute);
 app.use('/api/tour', tourRoute);
+app.use('/api/booking', bookingRoute);
+app.use('/api/review', reviewRoute);
 
 app.listen(PORT, () => console.log(`server up and runing on port ${PORT}`));
