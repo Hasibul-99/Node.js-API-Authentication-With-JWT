@@ -16,6 +16,7 @@ const userRoute = require('./routes/user/user');
 const tourRoute = require('./routes/tour/tour');
 const bookingRoute = require('./routes/booking/booking');
 const reviewRoute = require('./routes/review/review');
+const commentRoute = require('./routes/comment/index');
 // MIddleware
 app.use(express.json());
 
@@ -25,5 +26,6 @@ app.use('/api/user', userRoute);
 app.use('/api/tour', tourRoute);
 app.use('/api/booking', bookingRoute);
 app.use('/api/review', reviewRoute);
+app.use('/api/comment', commentRoute);
 
 app.listen(PORT, () => console.log(`server up and runing on port ${PORT}`));

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const {CreatedAtSchemas, CreatedBySchemas} = require('./common.schema');
 
 
-const ReviewSchema = new mongoose.Schema([CreatedAtSchemas, CreatedBySchemas, {
+const CommentSchema = new mongoose.Schema([CreatedAtSchemas, CreatedBySchemas, {
     comment: {
         type: String,
         required: true
@@ -14,9 +14,12 @@ const ReviewSchema = new mongoose.Schema([CreatedAtSchemas, CreatedBySchemas, {
     userId: {
         type: String
     },
-    point: {
-        type: Number
+    updateAt: {
+        type: Date,
+    },
+    replyComments: {
+        type: [String]
     }
 }])
 
-module.exports = mongoose.model("Review", ReviewSchema);
+module.exports = mongoose.model("Comment", CommentSchema);
